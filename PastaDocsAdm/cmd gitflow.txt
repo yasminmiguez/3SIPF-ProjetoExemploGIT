@@ -1,0 +1,181 @@
+
+C:\Users\labsfiap>cd D:\PastaTesteGIT
+
+C:\Users\labsfiap>d:
+
+D:\PastaTesteGIT>cd D:\PastaTesteGIT
+
+D:\PastaTesteGIT>git config --global user.email yasminmiguez@outlook.com
+
+D:\PastaTesteGIT>git clone https://github.com/yasminmiguez/3SIPF-ProjetoExemploGIT.git
+Cloning into '3SIPF-ProjetoExemploGIT'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+D:\PastaTesteGIT>dir
+ Volume in drive D is Dados
+ Volume Serial Number is 861D-D57C
+
+ Directory of D:\PastaTesteGIT
+
+16/04/2025  10:55    <DIR>          .
+16/04/2025  10:55    <DIR>          ..
+16/04/2025  10:55    <DIR>          3SIPF-ProjetoExemploGIT
+               0 File(s)              0 bytes
+               3 Dir(s)  393.730.801.664 bytes free
+
+D:\PastaTesteGIT>cd 3SIPF-ProjetoExemploGIT
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git flow init
+
+Which branch should be used for bringing forth production releases?
+   - main
+Branch name for production releases: [main]
+Branch name for "next release" development: [develop]
+
+How to name your supporting branch prefixes?
+Feature branches? [feature/]
+Bugfix branches? [bugfix/]
+Release branches? [release/]
+Hotfix branches? [hotfix/]
+Support branches? [support/]
+Version tag prefix? []
+Hooks and filters directory? [D:/PastaTesteGIT/3SIPF-ProjetoExemploGIT/.git/hooks]
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git branch
+* develop
+  main
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git status
+On branch develop
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        PastaDocsAdm/
+        PastaDocsTec/
+        PastaFontesApp/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git add .
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git status
+On branch develop
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   PastaDocsAdm/README.md
+        new file:   PastaDocsTec/README.md
+        new file:   PastaFontesApp/README.md
+
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git commit -m "Criacao de pastas para organizar o projeto"
+[develop beab27c] Criacao de pastas para organizar o projeto
+ 3 files changed, 13 insertions(+)
+ create mode 100644 PastaDocsAdm/README.md
+ create mode 100644 PastaDocsTec/README.md
+ create mode 100644 PastaFontesApp/README.md
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git status
+On branch develop
+nothing to commit, working tree clean
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git branch
+* develop
+  main
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git push -u origin develop
+info: please complete authentication in your browser...
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 28 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (8/8), 841 bytes | 841.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/yasminmiguez/3SIPF-ProjetoExemploGIT/pull/new/develop
+remote:
+To https://github.com/yasminmiguez/3SIPF-ProjetoExemploGIT.git
+ * [new branch]      develop -> develop
+branch 'develop' set up to track 'origin/develop'.
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git flow feature start tarefaDesenvClasseProduto
+Switched to a new branch 'feature/tarefaDesenvClasseProduto'
+
+Summary of actions:
+- A new branch 'feature/tarefaDesenvClasseProduto' was created, based on 'develop'
+- You are now on branch 'feature/tarefaDesenvClasseProduto'
+
+Now, start committing on your feature. When done, use:
+
+     git flow feature finish tarefaDesenvClasseProduto
+
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git branch
+  develop
+* feature/tarefaDesenvClasseProduto
+  main
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git status
+On branch feature/tarefaDesenvClasseProduto
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        PastaFontesApp/activity_player.xml
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git add .
+warning: in the working copy of 'PastaFontesApp/activity_player.xml', LF will be replaced by CRLF the next time Git touches it
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git status
+On branch feature/tarefaDesenvClasseProduto
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   PastaFontesApp/activity_player.xml
+
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git commit -m "Criacao da classe Produto"
+[feature/tarefaDesenvClasseProduto 742f871] Criacao da classe Produto
+ 1 file changed, 104 insertions(+)
+ create mode 100644 PastaFontesApp/activity_player.xml
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git branch
+  develop
+* feature/tarefaDesenvClasseProduto
+  main
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git flow feature finish tarefaDesenvClasseProduto
+Switched to branch 'develop'
+Your branch is up to date with 'origin/develop'.
+Updating beab27c..742f871
+Fast-forward
+ PastaFontesApp/activity_player.xml | 104 +++++++++++++++++++++++++++++++++++++
+ 1 file changed, 104 insertions(+)
+ create mode 100644 PastaFontesApp/activity_player.xml
+Deleted branch feature/tarefaDesenvClasseProduto (was 742f871).
+
+Summary of actions:
+- The feature branch 'feature/tarefaDesenvClasseProduto' was merged into 'develop'
+- Feature branch 'feature/tarefaDesenvClasseProduto' has been locally deleted
+- You are now on branch 'develop'
+
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git branch
+* develop
+  main
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>git push -u origin develop
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 28 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 1.09 KiB | 1.09 MiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/yasminmiguez/3SIPF-ProjetoExemploGIT.git
+   beab27c..742f871  develop -> develop
+branch 'develop' set up to track 'origin/develop'.
+
+D:\PastaTesteGIT\3SIPF-ProjetoExemploGIT>
